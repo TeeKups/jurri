@@ -1,0 +1,26 @@
+:root {
+    --header-color: #0d94ff;
+    --bg-light: #f2f2f2;
+    --bg-dark: #e6e6e6;
+    --footer-color: #0d94ff;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: auto;
+}
+
+html {
+    background-color: pink;
+}
+
+body {
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    font-size: 14pt;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}

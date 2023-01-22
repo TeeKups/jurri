@@ -1,0 +1,117 @@
+header {
+    position: sticky;
+    top: 0;
+    background-color: var(--header-color);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12pt;
+    box-shadow: 0 0 10px black;
+}
+
+header a {
+    font-size: 14pt;
+    text-decoration: none;
+}
+
+header a.active {
+    font-weight: 700;
+}
+
+header a:visited,
+header a:active,
+header a:link,
+header a:hover {
+    color: inherit;
+}
+
+header div {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    width: clamp(450px, 80%, 95%);
+    column-gap: 20px;
+}
+
+header img {
+    width: clamp(0px, 50%, 70px);
+}
+
+header #normal-nav {
+    justify-content: space-between;
+    align-items: center;
+    width: clamp(300px, 40%, 90%);
+}
+
+header #burger-nav {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    width: 70px;
+}
+
+header button {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    height: 70px;
+    width: 70px;
+}
+
+header #normal-nav ul {
+    display: flex;
+    flex: 0 1 100%;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+header #open-burger-nav {
+    background-image: url(icons/burger.svg);
+    display: none;
+}
+
+header #close-burger-nav {
+    background-image: url(icons/close.svg);
+    display: none;
+}
+
+header #burger-nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+}
+header #burger-nav ul {
+    width: 100%;
+    display: flex;
+    flex: 0 0 200px;
+    flex-direction: column;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+@media (max-width: 450px) {
+    header div {
+        width: 95%;
+        justify-content: space-around;
+    }
+
+    header #normal-nav {
+        display: none;
+    }
+
+    header #open-burger-nav {
+        display: flex;
+        width: clamp(0px, 50%, 70px);
+    }
+}

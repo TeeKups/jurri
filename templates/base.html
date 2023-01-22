@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="static/css/styles.css">
+        <link rel="stylesheet" href="static/css/header.css">
+        <link rel="stylesheet" href="static/css/main.css">
+        <link rel="stylesheet" href="static/css/footer.css">
+
+        <script defer src="static/scripts/main.js"></script>
+
+        <title>JURRI</title>
+    </head>
+    <body>
+        {% filter indent(width=8) %}
+            {{ header | safe }}
+        {% endfilter %}
+        <main>
+            {% for section in sections %}
+                {% filter indent(width=12) %}
+                    {{ section | safe }}
+                {% endfilter %}
+            {% endfor %}
+        </main>
+        <footer>
+            <div id="contact">
+                <section id="address">
+                    <h1>Osoite</h1>
+                    <p>Korkeakoulunkatu 12</p>
+                    <p>33720 TAMPERE</p>
+                </section>
+                <section id="contact-info">
+                    <h1>Sähköposti</h1>
+                    <p><a id="email-address" href="mailto:jurri@lists.tuni.fi">jurri@lists.tuni.fi</a></p>
+                </section>
+                <section id="social-media">
+                    <h1>Sosiaalinen media</h1>
+                    <a id="telegram-link" href="https://t.me/+WwmkMDHkiG43ZTlk"></a>
+                    <a id="instagram-link" href="https://www.instagram.com/jurri_tuni/"></a>
+                </section>
+            </div>
+            <hr>
+            <div id="copyright">
+                <p>&copy; JURRI {{ year }}</p>
+            </div>
+        </footer>
+    </body>
+</html>
