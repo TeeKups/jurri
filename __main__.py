@@ -43,7 +43,7 @@ def practise_times():
     return html
 
 
-def _render_sections(files: list, **kwargs) -> list[str]:
+def _render_sections(files: list, **kwargs) -> list:
     sections = [ f"""\n<section id='{_file.split("/")[1].split(".")[0]}'>\n"""
                  f"{ render_template(_file, **kwargs) }\n"
                   "</section>"
