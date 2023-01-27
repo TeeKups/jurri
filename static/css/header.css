@@ -8,6 +8,7 @@ header {
     align-items: center;
     font-size: 12pt;
     box-shadow: 0 0 10px black;
+    text-transform: uppercase;
 }
 
 header a {
@@ -28,6 +29,7 @@ header a:hover {
 
 header div {
     flex-direction: row;
+    flex-wrap: wrap;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -37,20 +39,13 @@ header div {
 }
 
 header img {
-    width: clamp(0px, 50%, 70px);
+    height: 75px;
 }
 
-header #normal-nav {
+header nav {
     justify-content: space-between;
     align-items: center;
-    width: clamp(300px, 40%, 90%);
-}
-
-header #burger-nav {
-    display: none;
-    justify-content: space-between;
-    align-items: center;
-    width: 70px;
+    width: clamp(500px, 40%, 90%);
 }
 
 header button {
@@ -58,11 +53,11 @@ header button {
     background-repeat: no-repeat;
     background-position: center;
     border: none;
-    height: 70px;
     width: 70px;
+    height: 70px;
 }
 
-header #normal-nav ul {
+header ul {
     display: flex;
     flex: 0 1 100%;
     flex-direction: row;
@@ -83,12 +78,15 @@ header #close-burger-nav {
     display: none;
 }
 
-header #burger-nav {
+header .burger {
     display: none;
     flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
 }
-header #burger-nav ul {
+
+header .burger ul {
     width: 100%;
     display: flex;
     flex: 0 0 200px;
@@ -100,18 +98,30 @@ header #burger-nav ul {
     margin: 0;
 }
 
-@media (max-width: 450px) {
+header .show {
+    display: flex;
+    width: 100%;
+}
+
+@media (max-width: 800px) {
     header div {
         width: 95%;
         justify-content: space-around;
     }
+}
 
-    header #normal-nav {
-        display: none;
-    }
+#toggle-language .en {
+    width: 50px;
+    height: 50px;
+    background-image: url('icons/union_jack.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 
-    header #open-burger-nav {
-        display: flex;
-        width: clamp(0px, 50%, 70px);
-    }
+#toggle-language .fi {
+    width: 50px;
+    height: 50px;
+    background-image: url('icons/siniristi.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
 }

@@ -39,7 +39,7 @@ def render_template(path, **kwargs) -> str:
 
 def practise_times():
     with open(os.path.join(SCRIPT_ROOT, "treeniajat.txt"), "r") as fd:
-        html = "\n".join([f"<p>{row}</p>" for row in fd.readlines()])
+        html = "\n".join(fd.readlines())
     return html
 
 

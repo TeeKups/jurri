@@ -1,3 +1,12 @@
-Maanantaisin klo 18.00 &ndash; 19.30
-Keskiviikkoisin klo 12.00 &ndash; 19.30
-Treenipaikkana Bommarin tatami
+<div class="en">
+    <p>On mondays at 18:00 &ndash; 19:30</p>
+    <p>On wednesdays at 18:00 &ndash; 19:30</p>
+    <p>On fridays at 18:00 &ndash; 19:30</p>
+    <p>Tranining location is the Bommari tatami</p>
+</div>
+<div class="fi">
+    <p>Maanantaisin klo 18.00 &ndash; 19.30</p>
+    <p>Keskiviikkoisin klo 18.00 &ndash; 19.30</p>
+    <p>Perjantaisin klo 18.00 &ndash; 19.30</p>
+    <p>Treenipaikkana Bommarin tatami</p>
+</div>

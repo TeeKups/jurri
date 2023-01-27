@@ -1,25 +1,29 @@
 <header>
     <div>
-        <a href="/">
+        <a scroll href="/">
             <img id="club-logo" alt="JURRI" src="static/images/jurri_logo.png">
         </a>
-        <nav id="normal-nav">
-            <ul>
-                <li><a href="/">Etusivu</a></li>
-                <li><a href="/club.html">Kerho</a></li>
-                <li><a scroll class="active" href="#ukk">UKK</a></li>
-                <li><a scroll href="#contact">Yhteystiedot</a></li>
-            </ul>
-        </nav>
         <button type="button" id="open-burger-nav"></button>
         <button type="button" id="close-burger-nav"></button>
+        <nav>
+            <ul>
+                <li class="en"><a href="/">front page</a></li>
+                <li class="en"><a href="/club.html">club</a></li>
+                <li class="en"><a scroll class="active" href="#ukk">q&amp;a</a></li>
+                <li class="en"><a scroll href="#contact">contact</a></li>
+
+                <li class="fi"><a href="/">etusivu</a></li>
+                <li class="fi"><a href="/club.html">kerho</a></li>
+                <li class="fi"><a scroll class="active" href="#ukk">UKK</a></li>
+                <li class="fi"><a scroll href="#contact">yhteystiedot</a></li>
+
+                <li>
+                    <button type="button" id="toggle-language">
+                        <div class="en"></div>
+                        <div class="fi"></div>
+                    </button>
+                </li>
+            </ul>
+        </nav>
     </div>
-    <nav id="burger-nav">
-        <ul>
-            <li><a href="/">Etusivu</a></li>
-            <li><a href="/club.html">Kerho</a></li>
-            <li><a scroll class="active" href="#ukk">UKK</a></li>
-            <li><a scroll href="#contact">Yhteystiedot</a></li>
-        </ul>
-    </nav>
 </header>
