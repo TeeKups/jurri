@@ -1,20 +1,20 @@
 <header>
     <div>
-        <a scroll href="/">
+        <a scroll href="#kurssimainos">
             <img id="club-logo" alt="JURRI" src="static/images/jurri_logo.png">
         </a>
         <button type="button" id="open-burger-nav"></button>
         <button type="button" id="close-burger-nav"></button>
         <nav>
             <ul>
-                <li class="en"><a href="/">front page</a></li>
-                <li class="en"><a scroll class="active" href="#kerho">club</a></li>
-                <li class="en"><a href="/questions.html">q&amp;a</a></li>
+                <li class="en"><a class="{{'active' if page == 'index' }}" href="/index.html">front page</a></li>
+                <li class="en"><a class="{{'active' if page == 'club' }}" href="/club.html">club</a></li>
+                <li class="en"><a class="{{'active' if page == 'ukk' }}" href="/questions.html">q&amp;a</a></li>
                 <li class="en"><a scroll href="#contact">contact</a></li>
 
-                <li class="fi"><a href="/">etusivu</a></li>
-                <li class="fi"><a scroll class="active" href="#kerho">kerho</a></li>
-                <li class="fi"><a href="/questions.html">UKK</a></li>
+                <li class="fi"><a class="{{'active' if page == 'index' }}" href="/index.html">etusivu</a></li>
+                <li class="fi"><a class="{{'active' if page == 'club' }}" href="/club.html">kerho</a></li>
+                <li class="fi"><a class="{{'active' if page == 'ukk' }}" href="/questions.html">UKK</a></li>
                 <li class="fi"><a scroll href="#contact">yhteystiedot</a></li>
 
                 <li>

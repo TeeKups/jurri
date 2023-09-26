@@ -1,6 +1,5 @@
 from datetime import date
 import argparse
-import csv
 import jinja2
 import os
 import shutil
@@ -59,7 +58,7 @@ def index():
     path = os.path.join(OUTPUT_PATH, "index.html")
     with open(path, "w") as fd:
         page = _render(
-            header=render_template("index/header.html"),
+            header=render_template("header.html", page="index"),
             sections=_render_sections(
                 [
                     "index/kurssimainos.html",
@@ -76,7 +75,7 @@ def club():
     path = os.path.join(OUTPUT_PATH, "club.html")
     with open(path, "w") as fd:
         page = _render(
-            header=render_template("kerho/header.html"),
+            header=render_template("header.html", page="club"),
             sections=_render_sections([f"kerho/kerho.html"])
         )
         fd.write(page)
@@ -85,11 +84,9 @@ def club():
 def questions():
     path = os.path.join(OUTPUT_PATH, "questions.html")
     with open(path, "w") as fd:
-        _header=render_template("ukk/header.html")
-        _sections=[render_template("ukk/ukk.html")]
         page = _render(
-                header=_header,
-                sections=_sections
+            header=render_template("header.html", page="ukk"),
+            sections=_render_sections([f"ukk/ukk.html"])
         )
         fd.write(page)
 
