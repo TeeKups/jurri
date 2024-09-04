@@ -13,7 +13,7 @@ The application uses the following python packages, which should also be install
 You can build the webpage by runnig the following script:
 
 ```sh
-python ./build.py
+python build.py
 ```
 
 This will create a web page and place the generated source code in the `build` folder.
@@ -39,7 +39,7 @@ HOSTNAME=the.host.fi
 
 ### Step 3 - Run the dist script 
 ```sh
-python ./dist.py
+python dist.py
 ```
 
 The script asks for your university username and password.
