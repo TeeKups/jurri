@@ -82,6 +82,7 @@ def index():
                 [
                     "index/kurssimainos.html",
                     "index/treeniajat.html",
+                    "index/telegram.html",
                     "index/kulkuohje.html",
                 ],
                 treeniajat=practise_times(),

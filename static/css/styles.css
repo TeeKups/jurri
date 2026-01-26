@@ -31,3 +31,8 @@ body {
     font-family: sans-serif;
     scroll-behavior: smooth;
 }
+
+small {
+    color: #666;
+    font-size: 0.9rem;
+}

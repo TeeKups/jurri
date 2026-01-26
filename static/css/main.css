@@ -91,7 +91,7 @@ main div #tg-link img {
     }
 
     main #kurssimainos .column {
-        width: clamp(0px, 98%, 500px);
+        width: clamp(0px, 98%, 65ch);
     }
 }
 
