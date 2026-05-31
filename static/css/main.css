@@ -75,6 +75,18 @@ main div #tg-link img {
     width: 100%;
 }
 
+#ukk {
+    flex-direction: column;
+
+    >:nth-child(2n){
+        background-color: white;
+    }
+
+    .column p {
+        width: 100%;
+    }
+}
+
 @media (max-width: 1200px) {
     main #kurssimainos {
         flex-direction: column;
