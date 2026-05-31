@@ -40,6 +40,7 @@ def main():
     index()
     club()
     questions()
+    board()
     shutil.copytree(
         os.path.join(SCRIPT_ROOT, "static"), os.path.join(OUTPUT_PATH, "static")
     )
@@ -113,6 +114,19 @@ def questions():
         page = _render(
             header=render_template("header.html", page="ukk"),
             sections=_render_sections([f"ukk/ukk.html"]),
+        )
+        fd.write(page)
+
+
+# @app.get("/board")
+
+
+def board():
+    path = os.path.join(OUTPUT_PATH, "board.html")
+    with open(path, "w") as fd:
+        page = _render(
+            header=render_template("header.html", page="board"),
+            sections=_render_sections([f"board/board.html"]),
         )
         fd.write(page)
 

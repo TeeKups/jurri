@@ -148,3 +148,69 @@ main #kulkuohje img {
 main #treeniajat p {
     text-align: center;
 }
+
+#board {
+    height: 100%;
+}
+
+#board .column > p {
+    text-align: left;
+    max-width: 75ch;
+}
+
+#board .column > h1 {
+    text-align: center;
+}
+
+#board-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 30px;
+    width: 100%;
+}
+
+.board-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: clamp(150px, 20%, 250px);
+}
+
+.board-photo {
+    position: relative;
+    width: 100%;
+}
+
+.board-photo img {
+    width: 100%;
+    display: block;
+}
+
+.board-info h2 {
+    margin: 10px 0 4px;
+    font-size: 1.1em;
+}
+
+.board-info p {
+    margin: 2px 0;
+    font-size: 0.9em;
+}
+
+.board-photo .photo-credit {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    margin: 0;
+    font-size: 0.65em;
+    color: gainsboro;
+    text-shadow: 0 0 4px black;
+}
+
+.board-info a {
+    display: inline-block;
+    margin-top: 6px;
+    font-size: 0.9em;
+}

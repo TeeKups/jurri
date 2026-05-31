@@ -9,6 +9,7 @@ header {
     font-size: 12pt;
     box-shadow: 0 0 10px black;
     text-transform: uppercase;
+    z-index: 1;
 }
 
 header a {
@@ -45,7 +46,7 @@ header img {
 header nav {
     justify-content: space-between;
     align-items: center;
-    width: clamp(500px, 40%, 90%);
+    width: clamp(600px, 40%, 90%);
 }
 
 header button {
