@@ -1,0 +1,31 @@
+.info-card {
+  line-height: 1.5;
+
+
+  .grid-list {
+    display: grid;
+    grid-template-columns: 150px 1fr; 
+    gap: 15px 20px;
+    align-items: start;
+
+    background-color: white;
+    padding: 0.5rem;
+    margin: 1rem;
+    border-radius: 4px;
+  }
+
+  dt {
+    font-weight: 700;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    padding-top: 2px;
+  }
+
+  dd {
+    margin: 0;
+    font-size: 1rem;
+  }
+
+}

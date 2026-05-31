@@ -1,31 +1,25 @@
 # JURRI
 
 ## Prerequisites
-This application is based on Python scripts so the Python should be installed on your machine.
-
-The application uses the following python packages, which should also be installed. For example using `pip`.
-- [Jinja2](https://palletsprojects.com/projects/jinja/) 
-- [python-dotenv](https://pypi.org/project/python-dotenv/)
-- [paramiko](https://www.paramiko.org/)
-
-## How to test
-### Step 1 - Building
-You can build the webpage by runnig the following script:
+This application is based on Python scripts. Install [uv](https://docs.astral.sh/uv/) to manage dependencies and run the scripts:
 
 ```sh
-python build.py
+uv sync
 ```
 
-This will create a web page and place the generated source code in the `build` folder.
+This installs all required packages automatically.
 
-### Step 2 - Running the server
-You can start the server with the following command:
+## How to Develop
+
+### Watch Mode
+
+The easiest way to work on the project is to run the watch script. It rebuilds automatically whenever a file changes and serves the result locally:
 
 ```sh
-python -m http.server -d build
+uv run watch.py
 ```
 
-Now you should be able to access the webpage from [localhost:8080](http://localhost:8000/).
+The page is then available at [localhost:8000](http://localhost:8000/). The watcher picks up changes in `templates/`, `static/`, and `treeniajat.txt`.
 
 ## How to upload the webpage to the server
 ### Step 1 - Turn on the VPN
@@ -39,7 +33,7 @@ HOSTNAME=the.host.fi
 
 ### Step 3 - Run the dist script 
 ```sh
-python dist.py
+uv run dist.py
 ```
 
 The script asks for your university username and password.

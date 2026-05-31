@@ -1,2 +1,9 @@
-# Created by venv; see https://docs.python.org/3/library/venv.html
-*
+build/
+.env
+__pycache__/
+*.py[cod]
+.vscode/
+# uv/venv internals
+bin/
+lib/
+pyvenv.cfg
