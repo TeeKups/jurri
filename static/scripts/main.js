@@ -10,24 +10,33 @@ const toggle_lang_btn = document.querySelector("#toggle-language");
 const english_elements = document.querySelectorAll(".en");
 const finnish_elements = document.querySelectorAll(".fi");
 
-let cookies = {};
-if (document.cookie === "") {
-  document.cookie = "language=fi;";
-}
+const LANGUAGES = ["fi", "en"];
+const page_links = document.querySelectorAll("a[href$='.html']");
 
-document.cookie.split(";").map(cookieString => {
-  let keyVal = cookieString.split("=");
-  cookies[keyVal[0].trim()] = keyVal[1].trim();
-});
-
-const bake_cookies = () => {
-  let cookieString = "";
-  for (const [key, value] of Object.entries(cookies)) {
-    cookieString = cookieString.concat(`${key}=${value};`);
+const stored_language = () => {
+  try {
+    return localStorage.getItem("language");
+  } catch {
+    return null;
   }
-
-  document.cookie = cookieString;
 };
+
+const store_language = lang => {
+  try {
+    localStorage.setItem("language", lang);
+  } catch {}
+};
+
+// language priority: ?lang= in url, then remembered choice, then finnish
+const initial_language = () => {
+  const from_url = new URLSearchParams(window.location.search).get("lang");
+  if (LANGUAGES.includes(from_url)) return from_url;
+  const from_storage = stored_language();
+  if (LANGUAGES.includes(from_storage)) return from_storage;
+  return "fi";
+};
+
+let language = initial_language();
 
 const clear_nav_links = () =>
   nav_links.forEach(link => {
@@ -116,7 +125,7 @@ nav_links.forEach(link =>
 
     link.classList.add("active");
 
-    if (getComputedStyle(burger_nav).getPropertyValue("display") != "none") {
+    if (nav.classList.contains("show")) {
       close_burger();
     }
   }),
@@ -139,17 +148,25 @@ const update_language = lang => {
       element.style.display = "";
     });
   }
+
+  document.documentElement.lang = lang;
+
+  // make page links lead to the same language version
+  page_links.forEach(link => {
+    const url = new URL(link.getAttribute("href"), window.location.href);
+    url.searchParams.set("lang", lang);
+    link.href = url.href;
+  });
+
+  const current = new URL(window.location.href);
+  current.searchParams.set("lang", lang);
+  history.replaceState(null, "", current.href);
 };
 
 toggle_lang_btn.addEventListener("click", event => {
-  if (cookies.language === "fi") {
-    cookies.language = "en";
-  } else {
-    cookies.language = "fi";
-  }
-  update_language(cookies.language);
-  bake_cookies();
-  console.log(document.cookie);
+  language = language === "fi" ? "en" : "fi";
+  update_language(language);
+  store_language(language);
 });
 
-update_language(cookies.language);
+update_language(language);
