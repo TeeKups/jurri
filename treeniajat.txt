@@ -1,11 +1,11 @@
 <div class="en">
-    <p>On mondays at 19:00 &ndash; 20:30</p>
+    <p>On mondays at 20:00 &ndash; 21:30</p>
     <p>On wednesdays at 18:00 &ndash; 19:30</p>
     <p>On fridays at 18:00 &ndash; 19:30</p>
     <p>Tranining location is the Bommari tatami</p>
 </div>
 <div class="fi">
-    <p>Maanantaisin klo 19.00 &ndash; 20.30</p>
+    <p>Maanantaisin klo 20.00 &ndash; 21.30</p>
     <p>Keskiviikkoisin klo 18.00 &ndash; 19.30</p>
     <p>Perjantaisin klo 18.00 &ndash; 19.30</p>
     <p>Treenipaikkana Bommarin tatami</p>
